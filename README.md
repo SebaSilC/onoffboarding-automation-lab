@@ -96,7 +96,7 @@ I use Airtable as the source of truth with the following fields:
 
 ## Diagram
 
-![Onboarding & Offboarding Automation Flow](./screenshots/onboarding-offboarding-diagram.png)
+![Automation Flow Diagram](./diagram.png)
 
 ---
 
