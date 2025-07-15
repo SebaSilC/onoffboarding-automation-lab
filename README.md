@@ -10,6 +10,90 @@ This lab demonstrates how to automate onboarding and offboarding for employees u
 
 ---
 
+## Airtable Employee Directory
+
+I use Airtable as the source of truth with the following fields:
+
+| Name        | Email             | Role      | Manager   | Status        |
+|-------------|-------------------|-----------|-----------|---------------|
+| Jane Smith  | jane@company.com  | Engineer  | J. Brown  | Onboarding    |
+| ...         | ...               | ...       | ...       | ...           |
+
+- Status field (`Onboarding`, `Active`, `Offboarding`) drives automations.
+
+---
+
+## Automation Flow
+
+- Onboarding: When a new employee row is added and Status = `Onboarding`, automation is triggered via Zapier.
+  
+- Actions:
+1. Google Workspace: Create account (`first.last@company.com`), assign to correct group/OU.
+2. Slack: Invite user, add to team channels, send personalized welcome DM.
+3. Asana: Create onboarding project, assign tasks to new hire/manager.
+4. Airtable: Update record with account details and onboarding progress.
+
+- Offboarding: When HR updates Status = `Offboarding` in Airtable, automation triggers offboarding tasks.
+  
+- Actions:
+1. Google Workspace: Suspend account, transfer docs to manager.
+2. Slack: Deactivate user.
+3. Asana: Reassign or close tasks/projects.
+4. Airtable: Log offboarding date and reason.
+
+---
+
+## Zapier Workflow Steps
+
+- Onboarding
+
+1. Trigger: Airtable record Status = "Onboarding"
+2. Google Workspace: Create user, assign group.
+3. Slack: Invite user, add to channels, send DM.
+4. Asana: Create onboarding project, assign tasks.
+5. Airtable: Update with account info.
+
+- Offboarding
+
+1. Trigger: Airtable record Status = "Offboarding"
+2. Google Workspace: Suspend user, transfer files.
+3. Slack: Deactivate user.
+4. Asana: Close/reassign tasks.
+5. Airtable: Log offboarding date.
+
+---
+
+## Screenshots
+
+*All relevant screenshots demonstrating each step are included in the screenshots/ folder of this repository.*
+
+| Order | File Name                        | What it Shows                                                                                                   |
+|-------|----------------------------------|-----------------------------------------------------------------------------------------------------------------|
+| 1     | airtable-employee-directory.png  | Airtable Employee Directory with fields for Name, Email, Role, Manager, and Status, tracking onboarding status. |
+| 2     | asana-onboarding-project.png     | Asana onboarding project listing new hire tasks, assignees, and due dates.                                      |
+| 3     | google-workspace-admin.png       | Google Workspace Admin panel showing how to add a new user and assign organizational unit.                      |
+| 4     | slack-welcome-message.png        | Example Slack direct message to a new hire with onboarding instructions and relevant channels.                  |
+| 5     | zapier-onboarding-flow.png       | Zapier workflow (Zap) automating onboarding steps from Airtable to Google Workspace, Slack, and Asana.          |
+
+## Screenshot Explanations
+
+1. airtable-employee-directory.png 
+   Displays the Airtable base used as the source of truth for all employees, including their current onboarding/offboarding status.
+
+2. asana-onboarding-project.png  
+   Shows an Asana project with a task list for onboarding a new hire, including assignments and due dates.
+
+3. google-workspace-admin.png  
+   Demonstrates the Google Workspace Admin panel used to create new employee accounts and assign them to the appropriate organizational unit.
+
+4. slack-welcome-message.png  
+   Example of a personalized Slack message sent to a new hire with onboarding steps and a welcome note.
+
+5. zapier-onboarding-flow.png  
+   Visualizes the Zapier automation workflow that connects Airtable with Google Workspace, Slack, and Asana to streamline onboarding.
+
+---
+
 ## Diagram
 
            ┌────────────────┐
@@ -38,100 +122,34 @@ This lab demonstrates how to automate onboarding and offboarding for employees u
            
 ---
 
-## Tool Integrations
-
-1. Airtable – Source of Truth
-- Employee Directory base with fields: Name, Email, Role, Manager, Status (Onboarding/Active/Offboarding)
-- Automation Trigger: When a row is added or status is updated
-
-2. Google Workspace – Account Management
-- Onboarding: Auto-create user accounts, assign roles/groups, set permissions (via Zapier or Google Apps Script)
-- Offboarding: Suspend/delete accounts, transfer docs
-
-3. Slack – Communication
-- Onboarding: Auto-invite to workspace, add to default/team channels, send welcome DM
-- Offboarding: Remove from channels, deactivate account
-
-4. Asana – Task Management
-- Onboarding: Create project/checklist for new hire (tasks: “Read Handbook”, “Set up 2FA”, “Meet Manager”)
-- Offboarding: Reassign/close open tasks, archive user projects
-
----
-
-## Automation Flow
-
-## Onboarding
-
-- I create an Employee Directory in Airtable with these fields: Name, Email, Role, Manager, Status (Onboarding/Active/Offboarding).
-- When a new employee row is added and Status = 'Onboarding', automation is triggered.
-- Automation Platform (Zapier or Make)
-- The automation (Zap) starts when an Airtable record’s Status = 'Onboarding'.
-
-   - Actions:
-     
-      - Create a Google Workspace account with correct group/OU.
-      - Add the user to Slack, auto-join #general, #onboarding, and team channels.
-      - Create an onboarding task project in Asana, assign it to the new hire and their manager.
-      - Log all actions and account usernames back in Airtable.
-      - Send a personalized Slack DM to the new hire with their onboarding steps.
-
----
-
-## Offboarding
-
-- "When HR sets Status = 'Offboarding' in Airtable:"
-- Suspend Google account, transfer files to manager.
-- Deactivate Slack account.
-- Close or reassign all Asana tasks/projects.
-- Update Airtable record with offboarding date.
-
----
-
-## Zapier Workflow Steps
-
-- Onboarding
-
-1. Trigger: Airtable record Status = "Onboarding"
-2. Google Workspace: Create user, assign group.
-3. Slack: Invite user, add to channels, send DM.
-4. Asana: Create onboarding project, assign tasks.
-5. Airtable: Update with account info.
-
-- Offboarding
-
-1. Trigger: Airtable record Status = "Offboarding"
-2. Google Workspace: Suspend user, transfer files.
-3. Slack: Deactivate user.
-4. Asana: Close/reassign tasks.
-5. Airtable: Log offboarding date.
-
----
-
 ## Permissions & Security
 
-- Google Workspace: Role-based OUs/groups for granular permissions  
-- Slack: Channel access by team/role  
-- Airtable: Base access limited to HR/managers  
-- Asana: Projects shared with relevant team only
+- Google Workspace: Role-based OUs/groups for granular permissions.  
+- Slack: Channel access by team/role.  
+- Airtable: Base access limited to HR/managers.  
+- Asana: Projects shared with relevant team only.
 
 ---
 
-## Screenshots
+## Extra Capabilities
 
-- Airtable Employee Directory sample  
-- Example Zapier/Make workflow  
-- Google Workspace Admin (user creation)  
-- Slack Welcome Message sample  
-- Asana Onboarding Project sample
+- Device Assignment:
+Airtable tracks laptops/devices issued to employees; flagged on offboarding for collection.
+
+- Endpoint Security:
+2FA enabled on Google Workspace and Slack by default; access revoked immediately on offboarding.
+
+- IT Support:
+#it-support Slack channel for day-to-day help; urgent tickets can trigger Asana task creation automatically.
+
+- Security Training:
+Automated reminders for phishing/security awareness can be assigned via Asana.
+
 
 ---
 
-## Why This Matters
+## About Me
 
-- Security: Automated deprovisioning protects company data  
-- Efficiency: Saves HR/IT time, reduces manual errors  
-- Great Experience: Consistent, welcoming onboarding
-
----
+I love automating business processes with modern SaaS tools and making work simpler for everyone. LinkedIn: https://www.linkedin.com/in/sebastiansilc/
 
 Sebastian Silva C. - July, 2025 - Berlin, Germany
