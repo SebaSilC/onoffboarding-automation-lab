@@ -77,19 +77,19 @@ I use Airtable as the source of truth with the following fields:
 
 ## Screenshot Explanations
 
-1. airtable-employee-directory.png 
+1. airtable-employee-directory.png
    Displays the Airtable base used as the source of truth for all employees, including their current onboarding/offboarding status.
 
-2. asana-onboarding-project.png  
+3. asana-onboarding-project.png  
    Shows an Asana project with a task list for onboarding a new hire, including assignments and due dates.
 
-3. google-workspace-admin.png  
+4. google-workspace-admin.png  
    Demonstrates the Google Workspace Admin panel used to create new employee accounts and assign them to the appropriate organizational unit.
 
-4. slack-welcome-message.png  
+5. slack-welcome-message.png  
    Example of a personalized Slack message sent to a new hire with onboarding steps and a welcome note.
 
-5. zapier-onboarding-flow.png  
+6. zapier-onboarding-flow.png  
    Visualizes the Zapier automation workflow that connects Airtable with Google Workspace, Slack, and Asana to streamline onboarding.
 
 ---
