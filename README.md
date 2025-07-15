@@ -123,6 +123,7 @@ Automated reminders for phishing/security awareness can be assigned via Asana.
 
 ## About Me
 
-I love automating business processes with modern SaaS tools and making work simpler for everyone. LinkedIn: https://www.linkedin.com/in/sebastiansilc/
+I love automating business processes with modern SaaS tools and making work simpler for everyone. 
+LinkedIn: https://www.linkedin.com/in/sebastiansilc/
 
 Sebastian Silva C. - July, 2025 - Berlin, Germany
