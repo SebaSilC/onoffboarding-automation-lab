@@ -67,13 +67,13 @@ This lab demonstrates how to automate onboarding and offboarding for employees u
 - Automation Platform (Zapier or Make)
 - The automation (Zap) starts when an Airtable record’s Status = 'Onboarding'.
 
-Actions:
-
-- Create a Google Workspace account with correct group/OU.
-- Add the user to Slack, auto-join #general, #onboarding, and team channels.
-- Create an onboarding task project in Asana, assign it to the new hire and their manager.
-- Log all actions and account usernames back in Airtable.
-- Send a personalized Slack DM to the new hire with their onboarding steps.
+   - Actions:
+     
+      - Create a Google Workspace account with correct group/OU.
+      - Add the user to Slack, auto-join #general, #onboarding, and team channels.
+      - Create an onboarding task project in Asana, assign it to the new hire and their manager.
+      - Log all actions and account usernames back in Airtable.
+      - Send a personalized Slack DM to the new hire with their onboarding steps.
 
 ---
 
@@ -87,21 +87,23 @@ Actions:
 
 ---
 
-## Sample Zapier/Make Workflow Steps
+## Zapier Workflow Steps
 
-Onboarding:
-1. Trigger: Airtable “Status” = Onboarding
-2. Action: Google Workspace – Create user, add to group
-3. Action: Slack – Invite user, add to #onboarding, send DM
-4. Action: Asana – Create onboarding task list, assign to user
-5. Action: Airtable – Update “Workspace/Slack Username”, “Onboarding Complete” checkbox
+- Onboarding
 
-Offboarding:
-1. Trigger: Airtable “Status” = Offboarding
-2. Action: Google Workspace – Suspend user, transfer ownership
-3. Action: Slack – Deactivate user
-4. Action: Asana – Reassign/close tasks
-5. Action: Airtable – Update “Offboarding Complete”
+1. Trigger: Airtable record Status = "Onboarding"
+2. Google Workspace: Create user, assign group.
+3. Slack: Invite user, add to channels, send DM.
+4. Asana: Create onboarding project, assign tasks.
+5. Airtable: Update with account info.
+
+- Offboarding
+
+1. Trigger: Airtable record Status = "Offboarding"
+2. Google Workspace: Suspend user, transfer files.
+3. Slack: Deactivate user.
+4. Asana: Close/reassign tasks.
+5. Airtable: Log offboarding date.
 
 ---
 
