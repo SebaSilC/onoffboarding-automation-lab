@@ -96,30 +96,8 @@ I use Airtable as the source of truth with the following fields:
 
 ## Diagram
 
-           ┌────────────────┐
-           │    Airtable    │
-           │  Employee Base │
-           └───────┬────────┘
-                   │  (new/updated record)
-                   ▼
-         ┌────────────────────┐
-         │  Zapier/Make Flow  │
-         └─┬───────┬────────┬─┘
-           │       │        │
-           ▼       ▼        ▼
-   ┌─────────┐ ┌────────┐ ┌────────┐
-   │ Google  │ │ Slack  │ │ Asana  │
-   │Workspace│ │        │ │        │
-   └─────────┘ └────────┘ └────────┘
-           │       │        │
-       (updates, tasks, messages)
-                   │
-                   ▼
-           ┌───────────────┐
-           │   Airtable    │
-           │ (Status Log)  │
-           └───────────────┘
-           
+![Onboarding & Offboarding Automation Flow](./screenshots/onboarding-offboarding-diagram.png)
+
 ---
 
 ## Permissions & Security
