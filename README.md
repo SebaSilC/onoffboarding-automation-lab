@@ -4,6 +4,20 @@ Showcasing integration skills with Google Workspace, Slack, Airtable, and Asana 
 
 ---
 
+## Table of Contents
+
+- [Overview]
+- [Airtable Employee Directory]
+- [Automation Flow]
+- [Zapier Workflow Steps]
+- [Screenshots]
+- [Diagram]
+- [Permissions & Security]
+- [Extra Capabilities]
+- [About Me]
+
+---
+
 ## Overview
 
 This lab demonstrates how to automate onboarding and offboarding for employees using SaaS tools, focusing on user accounts, permissions, and integration best practices. All examples are based on real-world scenarios and implemented using no-code and low-code tools (Zapier/Make, native automations, APIs).
