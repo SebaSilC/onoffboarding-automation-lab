@@ -135,10 +135,10 @@ Manual onboarding and offboarding can lead to security gaps (such as lingering a
 
 ## References
 
-- [Zapier Documentation](https://zapier.com/help/)
+- [Zapier Help Center](https://help.zapier.com/)
 - [Airtable Automations](https://support.airtable.com/docs/automations-overview)
 - [Google Workspace Admin Help](https://support.google.com/a/)
-- [Slack API Docs](https://api.slack.com/)
+- [Slack Help Center](https://slack.com/help/categories/200111606)
 - [Asana Guide](https://asana.com/guide)
 
 ---
