@@ -6,22 +6,22 @@ Showcasing integration skills with Google Workspace, Slack, Airtable, and Asana 
 
 ## Table of Contents
 
-- [Overview]
-- [Real-World Risk]
-- [What I Built]
-- [Diagram]
-- [Objectives]
-- [Steps Performed]
-  - [1. Employee Directory Setup in Airtable]
-  - [2. Onboarding Project Creation in Asana]
-  - [3. Google Workspace User Provisioning]
-  - [4. Slack Access Management]
-  - [5. Zapier Workflow Automation]
-- [Screenshots]
-- [Lessons Learned]
-- [Permissions & Security]
-- [Extra Capabilities]
-- [References]
+- [Overview](#overview)
+- [Real-World Risk](#real-world-risk)
+- [What I Built](#what-i-built)
+- [Diagram](#diagram)
+- [Objectives](#objectives)
+- [Steps Performed](#steps-performed)
+    - [1. Employee Directory Setup in Airtable]
+    - [2. Onboarding Project Creation in Asana]
+    - [3. Google Workspace User Provisioning]
+    - [4. Slack Access Management]
+    - [5. Zapier Workflow Automation]
+- [Screenshots](#screenshots)
+- [Lessons Learned](#lessons-learned)
+- [Permissions & Security](#permissions--security)
+- [Extra Capabilities](#extra-capabilities)
+- [References](#references)
 
 ---
 
